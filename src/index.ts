@@ -1,5 +1,11 @@
+import "./styles.css";
+
+export default function App() {
+  return "";
+}
+
 export class Item {
-  static all = [];
+  static all: any = [];
 
   name: string;
   sellIn: number;
@@ -23,42 +29,50 @@ export class GildedRose {
   updateQuality() {
     this.items.forEach((item) => {
       if (
-        item.name !== "Aged Brie" &&
-        item.name !== "Backstage passes to a TAFKAL80ETC concert" &&
-        item.name !== "Sulfuras, Hand of Ragnaros"
-      ) {
-        item.quality -= 1;
-        if (item.sellIn < 0 && item.quality > 0) {
-          item.quality -= 1;
-        }
-      } else if (item.quality < 50) {
-        item.quality += 1;
-        if (item.name === "Backstage passes to a TAFKAL80ETC concert") {
-          if (item.sellIn < 11 || item.sellIn < 6) {
-            item.quality += 1;
-          }
-        }
-      }
-
-      if (
         item.name === "Aged Brie" ||
         item.name === "Backstage passes to a TAFKAL80ETC concert"
       ) {
         item.quality += 1;
       }
-
-      if (item.name === "Sulfuras, Hand of Ragnaros") {
-        item.sellIn -= 1;
+      if (item.name === "Backstage passes to a TAFKAL80ETC concert") {
+        item.quality =
+          item.sellIn <= 10
+            ? (item.quality += 2)
+            : item.quality <= 5
+            ? (item.quality += 3)
+            : item.quality;
+        console.log(item);
       }
     });
+  }
 
+  handleQualityNumber() {
+    this.items.forEach((item) => {
+      if (item.quality > 50 && item.name !== "Sulfuras, Hand of Ragnaros") {
+        item.quality = 50;
+      }
+      if (item.quality < 0) {
+        item.quality = 0;
+      }
+      if (
+        item.name === "Backstage passes to a TAFKAL80ETC concert" &&
+        item.sellIn === 0
+      ) {
+        item.quality = 0;
+      }
+    });
+  }
+
+  updateItems() {
+    this.updateQuality();
+    this.handleQualityNumber();
     return this.items;
   }
 }
 
-new Item("Sulfuras, Hand of Ragnaros", 6, 32);
-new Item("Aged Brie", 20, 50);
-new Item("Backstage passes to a TAFKAL80ETC concert", 12, 0);
+new Item("Sulfuras, Hand of Ragnaros", 6, 80);
+new Item("Aged Brie", 20, 59);
+new Item("Backstage passes to a TAFKAL80ETC concert", 0, 40);
 new Item("Test 01", 0, 0);
 
-console.log("Update Quality : ", new GildedRose().updateQuality());
+console.log("Update Quality : ", new GildedRose().updateItems());
