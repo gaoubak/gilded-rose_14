@@ -80,6 +80,9 @@ export class GildedRose {
     }
 
     private ensureQualityBounds(item: Item): void {
+        console.log(`Ensuring quality bounds for ${item.name}`);
         item.quality = Math.max(0, Math.min(item.quality, 50));
+        console.log(`${item.name} - Quality after ensuring bounds: ${item.quality}`);
     }
+
 }
