@@ -18,12 +18,14 @@ export class GildedRose {
     }
 
     updateQuality(): Array<Item> {
+        console.log("Before update:", JSON.stringify(this.items));
         this.items.forEach(item => {
             if (item.name !== "Sulfuras, Hand of Ragnaros") {
                 this.adjustSellIn(item);
                 this.adjustQuality(item);
             }
         });
+        console.log("After update:", JSON.stringify(this.items));
         return this.items;
     }
 
@@ -47,17 +49,23 @@ export class GildedRose {
     }
 
     private adjustAgedBrieQuality(item: Item): void {
+        console.log("Aged Brie before:", item.quality);
         item.quality += 1;
         if (item.sellIn < 0) item.quality += 1;
+        console.log("Aged Brie after:", item.quality);
     }
 
     private adjustBackstagePassQuality(item: Item): void {
+        console.log("Backstage Pass before:", item.quality);
         item.quality += item.sellIn < 6 ? 3 : item.sellIn < 11 ? 2 : 1;
         if (item.sellIn < 0) item.quality = 0;
+        console.log("Backstage Pass after:", item.quality);
     }
 
     private adjustDefaultQuality(item: Item): void {
+        console.log("Default item before:", item.quality);
         item.quality -= item.sellIn < 0 ? 2 : 1;
+        console.log("Default item after:", item.quality);
     }
 
     private ensureQualityBounds(item: Item): void {
