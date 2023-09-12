@@ -18,6 +18,10 @@ export class Item {
 }
 
 export class GildedRose {
+    private MAX_QUALITY = 50;
+    private DEFAULT_QUALITY_UPDATE = 1;
+    private MIN_SELLIN = 0;
+
     items: Array<Item>;
 
     constructor(items: Array<Item> = []) {
@@ -61,15 +65,15 @@ export class GildedRose {
 
     private adjustAgedBrieQuality(item: Item): void {
         console.log(`Aged Brie - Quality before: ${item.quality}`);
-        item.quality += 1;
-        if (item.sellIn < 0) item.quality += 1;
+        item.quality += this.DEFAULT_QUALITY_UPDATE;
+        if (item.sellIn < 0) item.quality += this.DEFAULT_QUALITY_UPDATE;
         console.log(`Aged Brie - Quality after: ${item.quality}`);
     }
 
     private adjustBackstagePassQuality(item: Item): void {
         console.log(`Backstage Pass - Quality before: ${item.quality}`);
         item.quality += item.sellIn < 6 ? 3 : item.sellIn < 11 ? 2 : 1;
-        if (item.sellIn < 0) item.quality = 0;
+        if (item.sellIn < 0) item.quality = this.MIN_SELLIN;
         console.log(`Backstage Pass - Quality after: ${item.quality}`);
     }
 
@@ -81,8 +85,7 @@ export class GildedRose {
 
     private ensureQualityBounds(item: Item): void {
         console.log(`Ensuring quality bounds for ${item.name}`);
-        item.quality = Math.max(0, Math.min(item.quality, 50));
+        item.quality = Math.max(this.MIN_SELLIN, Math.min(item.quality, this.MAX_QUALITY));
         console.log(`${item.name} - Quality after ensuring bounds: ${item.quality}`);
     }
-
 }
