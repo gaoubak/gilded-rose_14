@@ -10,6 +10,8 @@ exports[`GildedRose should decrease quality and sellIn for a normal item 1`] = `
   "normal - SellIn: 10, Quality: 20",
   "Default item - Quality before: 20",
   "Default item - Quality after: 19",
+  "Ensuring quality bounds for normal",
+  "normal - Quality after ensuring bounds: 19",
   "After update:",
   "normal - SellIn: 9, Quality: 19",
 ]
@@ -21,6 +23,8 @@ exports[`GildedRose should degrade twice as fast for normal items once sell date
   "normal - SellIn: 0, Quality: 20",
   "Default item - Quality before: 20",
   "Default item - Quality after: 18",
+  "Ensuring quality bounds for normal",
+  "normal - Quality after ensuring bounds: 18",
   "After update:",
   "normal - SellIn: -1, Quality: 18",
 ]
@@ -32,6 +36,8 @@ exports[`GildedRose should drop quality to 0 for Backstage passes after concert 
   "Backstage passes to a TAFKAL80ETC concert - SellIn: 0, Quality: 20",
   "Backstage Pass - Quality before: 20",
   "Backstage Pass - Quality after: 0",
+  "Ensuring quality bounds for Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert - Quality after ensuring bounds: 0",
   "After update:",
   "Backstage passes to a TAFKAL80ETC concert - SellIn: -1, Quality: 0",
 ]
@@ -52,6 +58,8 @@ exports[`GildedRose should increase quality by 2 for Backstage passes with 10 da
   "Backstage passes to a TAFKAL80ETC concert - SellIn: 10, Quality: 20",
   "Backstage Pass - Quality before: 20",
   "Backstage Pass - Quality after: 22",
+  "Ensuring quality bounds for Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert - Quality after ensuring bounds: 22",
   "After update:",
   "Backstage passes to a TAFKAL80ETC concert - SellIn: 9, Quality: 22",
 ]
@@ -63,6 +71,8 @@ exports[`GildedRose should increase quality by 3 for Backstage passes with 5 day
   "Backstage passes to a TAFKAL80ETC concert - SellIn: 5, Quality: 20",
   "Backstage Pass - Quality before: 20",
   "Backstage Pass - Quality after: 23",
+  "Ensuring quality bounds for Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert - Quality after ensuring bounds: 23",
   "After update:",
   "Backstage passes to a TAFKAL80ETC concert - SellIn: 4, Quality: 23",
 ]
@@ -74,6 +84,8 @@ exports[`GildedRose should increase quality for Aged Brie 1`] = `
   "Aged Brie - SellIn: 10, Quality: 20",
   "Aged Brie - Quality before: 20",
   "Aged Brie - Quality after: 21",
+  "Ensuring quality bounds for Aged Brie",
+  "Aged Brie - Quality after ensuring bounds: 21",
   "After update:",
   "Aged Brie - SellIn: 9, Quality: 21",
 ]
@@ -85,6 +97,8 @@ exports[`GildedRose should increase quality for Backstage passes as concert appr
   "Backstage passes to a TAFKAL80ETC concert - SellIn: 12, Quality: 20",
   "Backstage Pass - Quality before: 20",
   "Backstage Pass - Quality after: 21",
+  "Ensuring quality bounds for Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert - Quality after ensuring bounds: 21",
   "After update:",
   "Backstage passes to a TAFKAL80ETC concert - SellIn: 11, Quality: 21",
 ]
@@ -96,6 +110,8 @@ exports[`GildedRose should increase quality of Aged Brie by 1 when sellIn is neg
   "Aged Brie - SellIn: -1, Quality: 20",
   "Aged Brie - Quality before: 20",
   "Aged Brie - Quality after: 22",
+  "Ensuring quality bounds for Aged Brie",
+  "Aged Brie - Quality after ensuring bounds: 22",
   "After update:",
   "Aged Brie - SellIn: -2, Quality: 22",
 ]
@@ -107,6 +123,8 @@ exports[`GildedRose should not decrease quality below 0 1`] = `
   "normal - SellIn: 10, Quality: 0",
   "Default item - Quality before: 0",
   "Default item - Quality after: -1",
+  "Ensuring quality bounds for normal",
+  "normal - Quality after ensuring bounds: 0",
   "After update:",
   "normal - SellIn: 9, Quality: 0",
 ]
@@ -118,6 +136,8 @@ exports[`GildedRose should not increase quality above 50 for Aged Brie 1`] = `
   "Aged Brie - SellIn: 10, Quality: 50",
   "Aged Brie - Quality before: 50",
   "Aged Brie - Quality after: 51",
+  "Ensuring quality bounds for Aged Brie",
+  "Aged Brie - Quality after ensuring bounds: 50",
   "After update:",
   "Aged Brie - SellIn: 9, Quality: 50",
 ]
@@ -129,6 +149,8 @@ exports[`should degrade Quality of "normal" item twice as fast after sell by dat
   "normal - SellIn: 0, Quality: 20",
   "Default item - Quality before: 20",
   "Default item - Quality after: 18",
+  "Ensuring quality bounds for normal",
+  "normal - Quality after ensuring bounds: 18",
   "After update:",
   "normal - SellIn: -1, Quality: 18",
 ]
@@ -140,6 +162,8 @@ exports[`should increase Quality for "Aged Brie" as it gets older 1`] = `
   "Aged Brie - SellIn: 5, Quality: 10",
   "Aged Brie - Quality before: 10",
   "Aged Brie - Quality after: 11",
+  "Ensuring quality bounds for Aged Brie",
+  "Aged Brie - Quality after ensuring bounds: 11",
   "After update:",
   "Aged Brie - SellIn: 4, Quality: 11",
 ]
@@ -151,18 +175,24 @@ exports[`should increase Quality for "Backstage passes" according to SellIn valu
   "Backstage passes to a TAFKAL80ETC concert - SellIn: 10, Quality: 20",
   "Backstage Pass - Quality before: 20",
   "Backstage Pass - Quality after: 22",
+  "Ensuring quality bounds for Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert - Quality after ensuring bounds: 22",
   "After update:",
   "Backstage passes to a TAFKAL80ETC concert - SellIn: 9, Quality: 22",
   "Before update:",
   "Backstage passes to a TAFKAL80ETC concert - SellIn: 5, Quality: 20",
   "Backstage Pass - Quality before: 20",
   "Backstage Pass - Quality after: 23",
+  "Ensuring quality bounds for Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert - Quality after ensuring bounds: 23",
   "After update:",
   "Backstage passes to a TAFKAL80ETC concert - SellIn: 4, Quality: 23",
   "Before update:",
   "Backstage passes to a TAFKAL80ETC concert - SellIn: 0, Quality: 20",
   "Backstage Pass - Quality before: 20",
   "Backstage Pass - Quality after: 0",
+  "Ensuring quality bounds for Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert - Quality after ensuring bounds: 0",
   "After update:",
   "Backstage passes to a TAFKAL80ETC concert - SellIn: -1, Quality: 0",
 ]
@@ -174,6 +204,8 @@ exports[`should increase Quality for "Backstage passes" as SellIn value approach
   "Backstage passes to a TAFKAL80ETC concert - SellIn: 10, Quality: 20",
   "Backstage Pass - Quality before: 20",
   "Backstage Pass - Quality after: 22",
+  "Ensuring quality bounds for Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert - Quality after ensuring bounds: 22",
   "After update:",
   "Backstage passes to a TAFKAL80ETC concert - SellIn: 9, Quality: 22",
 ]
@@ -185,6 +217,8 @@ exports[`should never allow Quality to be more than 50 1`] = `
   "Aged Brie - SellIn: 5, Quality: 40",
   "Aged Brie - Quality before: 40",
   "Aged Brie - Quality after: 41",
+  "Ensuring quality bounds for Aged Brie",
+  "Aged Brie - Quality after ensuring bounds: 41",
   "After update:",
   "Aged Brie - SellIn: 4, Quality: 41",
 ]
@@ -196,6 +230,8 @@ exports[`should never allow negative Quality 1`] = `
   "Normal Item - SellIn: 5, Quality: 2",
   "Default item - Quality before: 2",
   "Default item - Quality after: 1",
+  "Ensuring quality bounds for Normal Item",
+  "Normal Item - Quality after ensuring bounds: 1",
   "After update:",
   "Normal Item - SellIn: 4, Quality: 1",
 ]
