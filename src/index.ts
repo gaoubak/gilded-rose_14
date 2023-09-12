@@ -1,3 +1,10 @@
+enum ItemsName {
+    AgedBrie = "Aged Brie",
+    BackstagePasses = "Backstage passes to a TAFKAL80ETC concert",
+    Sulfuras = "Sulfuras, Hand of Ragnaros",
+    Conjured = "Conjured Mana Cake",
+}
+
 export class Item {
     name: string;
     sellIn: number;
@@ -18,14 +25,18 @@ export class GildedRose {
     }
 
     updateQuality(): Array<Item> {
-        console.log("Before update:", JSON.stringify(this.items));
+        console.log("Before update:");
         this.items.forEach(item => {
-            if (item.name !== "Sulfuras, Hand of Ragnaros") {
+            console.log(`${item.name} - SellIn: ${item.sellIn}, Quality: ${item.quality}`);
+            if (item.name !== ItemsName.Sulfuras) {
                 this.adjustSellIn(item);
                 this.adjustQuality(item);
             }
         });
-        console.log("After update:", JSON.stringify(this.items));
+        console.log("After update:");
+        this.items.forEach(item => {
+            console.log(`${item.name} - SellIn: ${item.sellIn}, Quality: ${item.quality}`);
+        });
         return this.items;
     }
 
@@ -35,10 +46,10 @@ export class GildedRose {
 
     private adjustQuality(item: Item): void {
         switch (item.name) {
-            case "Aged Brie":
+            case ItemsName.AgedBrie:
                 this.adjustAgedBrieQuality(item);
                 break;
-            case "Backstage passes to a TAFKAL80ETC concert":
+            case ItemsName.BackstagePasses:
                 this.adjustBackstagePassQuality(item);
                 break;
             default:
@@ -49,23 +60,23 @@ export class GildedRose {
     }
 
     private adjustAgedBrieQuality(item: Item): void {
-        console.log("Aged Brie before:", item.quality);
+        console.log(`Aged Brie - Quality before: ${item.quality}`);
         item.quality += 1;
         if (item.sellIn < 0) item.quality += 1;
-        console.log("Aged Brie after:", item.quality);
+        console.log(`Aged Brie - Quality after: ${item.quality}`);
     }
 
     private adjustBackstagePassQuality(item: Item): void {
-        console.log("Backstage Pass before:", item.quality);
+        console.log(`Backstage Pass - Quality before: ${item.quality}`);
         item.quality += item.sellIn < 6 ? 3 : item.sellIn < 11 ? 2 : 1;
         if (item.sellIn < 0) item.quality = 0;
-        console.log("Backstage Pass after:", item.quality);
+        console.log(`Backstage Pass - Quality after: ${item.quality}`);
     }
 
     private adjustDefaultQuality(item: Item): void {
-        console.log("Default item before:", item.quality);
+        console.log(`Default item - Quality before: ${item.quality}`);
         item.quality -= item.sellIn < 0 ? 2 : 1;
-        console.log("Default item after:", item.quality);
+        console.log(`Default item - Quality after: ${item.quality}`);
     }
 
     private ensureQualityBounds(item: Item): void {

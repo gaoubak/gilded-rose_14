@@ -7,165 +7,205 @@ exports[`GildedRose constructor should instantiate with provided items 1`] = `[]
 exports[`GildedRose should decrease quality and sellIn for a normal item 1`] = `
 [
   "Before update:",
-  "Default item before:",
-  "Default item after:",
+  "normal - SellIn: 10, Quality: 20",
+  "Default item - Quality before: 20",
+  "Default item - Quality after: 19",
   "After update:",
+  "normal - SellIn: 9, Quality: 19",
 ]
 `;
 
 exports[`GildedRose should degrade twice as fast for normal items once sell date has passed 1`] = `
 [
   "Before update:",
-  "Default item before:",
-  "Default item after:",
+  "normal - SellIn: 0, Quality: 20",
+  "Default item - Quality before: 20",
+  "Default item - Quality after: 18",
   "After update:",
+  "normal - SellIn: -1, Quality: 18",
 ]
 `;
 
 exports[`GildedRose should drop quality to 0 for Backstage passes after concert 1`] = `
 [
   "Before update:",
-  "Backstage Pass before:",
-  "Backstage Pass after:",
+  "Backstage passes to a TAFKAL80ETC concert - SellIn: 0, Quality: 20",
+  "Backstage Pass - Quality before: 20",
+  "Backstage Pass - Quality after: 0",
   "After update:",
+  "Backstage passes to a TAFKAL80ETC concert - SellIn: -1, Quality: 0",
 ]
 `;
 
 exports[`GildedRose should handle Sulfuras correctly (no change) 1`] = `
 [
   "Before update:",
+  "Sulfuras, Hand of Ragnaros - SellIn: 10, Quality: 80",
   "After update:",
+  "Sulfuras, Hand of Ragnaros - SellIn: 10, Quality: 80",
 ]
 `;
 
 exports[`GildedRose should increase quality by 2 for Backstage passes with 10 days or less 1`] = `
 [
   "Before update:",
-  "Backstage Pass before:",
-  "Backstage Pass after:",
+  "Backstage passes to a TAFKAL80ETC concert - SellIn: 10, Quality: 20",
+  "Backstage Pass - Quality before: 20",
+  "Backstage Pass - Quality after: 22",
   "After update:",
+  "Backstage passes to a TAFKAL80ETC concert - SellIn: 9, Quality: 22",
 ]
 `;
 
 exports[`GildedRose should increase quality by 3 for Backstage passes with 5 days or less 1`] = `
 [
   "Before update:",
-  "Backstage Pass before:",
-  "Backstage Pass after:",
+  "Backstage passes to a TAFKAL80ETC concert - SellIn: 5, Quality: 20",
+  "Backstage Pass - Quality before: 20",
+  "Backstage Pass - Quality after: 23",
   "After update:",
+  "Backstage passes to a TAFKAL80ETC concert - SellIn: 4, Quality: 23",
 ]
 `;
 
 exports[`GildedRose should increase quality for Aged Brie 1`] = `
 [
   "Before update:",
-  "Aged Brie before:",
-  "Aged Brie after:",
+  "Aged Brie - SellIn: 10, Quality: 20",
+  "Aged Brie - Quality before: 20",
+  "Aged Brie - Quality after: 21",
   "After update:",
+  "Aged Brie - SellIn: 9, Quality: 21",
 ]
 `;
 
 exports[`GildedRose should increase quality for Backstage passes as concert approaches 1`] = `
 [
   "Before update:",
-  "Backstage Pass before:",
-  "Backstage Pass after:",
+  "Backstage passes to a TAFKAL80ETC concert - SellIn: 12, Quality: 20",
+  "Backstage Pass - Quality before: 20",
+  "Backstage Pass - Quality after: 21",
   "After update:",
+  "Backstage passes to a TAFKAL80ETC concert - SellIn: 11, Quality: 21",
 ]
 `;
 
 exports[`GildedRose should increase quality of Aged Brie by 1 when sellIn is negative 1`] = `
 [
   "Before update:",
-  "Aged Brie before:",
-  "Aged Brie after:",
+  "Aged Brie - SellIn: -1, Quality: 20",
+  "Aged Brie - Quality before: 20",
+  "Aged Brie - Quality after: 22",
   "After update:",
+  "Aged Brie - SellIn: -2, Quality: 22",
 ]
 `;
 
 exports[`GildedRose should not decrease quality below 0 1`] = `
 [
   "Before update:",
-  "Default item before:",
-  "Default item after:",
+  "normal - SellIn: 10, Quality: 0",
+  "Default item - Quality before: 0",
+  "Default item - Quality after: -1",
   "After update:",
+  "normal - SellIn: 9, Quality: 0",
 ]
 `;
 
 exports[`GildedRose should not increase quality above 50 for Aged Brie 1`] = `
 [
   "Before update:",
-  "Aged Brie before:",
-  "Aged Brie after:",
+  "Aged Brie - SellIn: 10, Quality: 50",
+  "Aged Brie - Quality before: 50",
+  "Aged Brie - Quality after: 51",
   "After update:",
+  "Aged Brie - SellIn: 9, Quality: 50",
 ]
 `;
 
 exports[`should degrade Quality of "normal" item twice as fast after sell by date 1`] = `
 [
   "Before update:",
-  "Default item before:",
-  "Default item after:",
+  "normal - SellIn: 0, Quality: 20",
+  "Default item - Quality before: 20",
+  "Default item - Quality after: 18",
   "After update:",
+  "normal - SellIn: -1, Quality: 18",
 ]
 `;
 
 exports[`should increase Quality for "Aged Brie" as it gets older 1`] = `
 [
   "Before update:",
-  "Aged Brie before:",
-  "Aged Brie after:",
+  "Aged Brie - SellIn: 5, Quality: 10",
+  "Aged Brie - Quality before: 10",
+  "Aged Brie - Quality after: 11",
   "After update:",
+  "Aged Brie - SellIn: 4, Quality: 11",
 ]
 `;
 
 exports[`should increase Quality for "Backstage passes" according to SellIn value 1`] = `
 [
   "Before update:",
-  "Backstage Pass before:",
-  "Backstage Pass after:",
+  "Backstage passes to a TAFKAL80ETC concert - SellIn: 10, Quality: 20",
+  "Backstage Pass - Quality before: 20",
+  "Backstage Pass - Quality after: 22",
   "After update:",
+  "Backstage passes to a TAFKAL80ETC concert - SellIn: 9, Quality: 22",
   "Before update:",
-  "Backstage Pass before:",
-  "Backstage Pass after:",
+  "Backstage passes to a TAFKAL80ETC concert - SellIn: 5, Quality: 20",
+  "Backstage Pass - Quality before: 20",
+  "Backstage Pass - Quality after: 23",
   "After update:",
+  "Backstage passes to a TAFKAL80ETC concert - SellIn: 4, Quality: 23",
   "Before update:",
-  "Backstage Pass before:",
-  "Backstage Pass after:",
+  "Backstage passes to a TAFKAL80ETC concert - SellIn: 0, Quality: 20",
+  "Backstage Pass - Quality before: 20",
+  "Backstage Pass - Quality after: 0",
   "After update:",
+  "Backstage passes to a TAFKAL80ETC concert - SellIn: -1, Quality: 0",
 ]
 `;
 
 exports[`should increase Quality for "Backstage passes" as SellIn value approaches 1`] = `
 [
   "Before update:",
-  "Backstage Pass before:",
-  "Backstage Pass after:",
+  "Backstage passes to a TAFKAL80ETC concert - SellIn: 10, Quality: 20",
+  "Backstage Pass - Quality before: 20",
+  "Backstage Pass - Quality after: 22",
   "After update:",
+  "Backstage passes to a TAFKAL80ETC concert - SellIn: 9, Quality: 22",
 ]
 `;
 
 exports[`should never allow Quality to be more than 50 1`] = `
 [
   "Before update:",
-  "Aged Brie before:",
-  "Aged Brie after:",
+  "Aged Brie - SellIn: 5, Quality: 40",
+  "Aged Brie - Quality before: 40",
+  "Aged Brie - Quality after: 41",
   "After update:",
+  "Aged Brie - SellIn: 4, Quality: 41",
 ]
 `;
 
 exports[`should never allow negative Quality 1`] = `
 [
   "Before update:",
-  "Default item before:",
-  "Default item after:",
+  "Normal Item - SellIn: 5, Quality: 2",
+  "Default item - Quality before: 2",
+  "Default item - Quality after: 1",
   "After update:",
+  "Normal Item - SellIn: 4, Quality: 1",
 ]
 `;
 
 exports[`should never change SellIn or Quality for "Sulfuras" 1`] = `
 [
   "Before update:",
+  "Sulfuras, Hand of Ragnaros - SellIn: 5, Quality: 80",
   "After update:",
+  "Sulfuras, Hand of Ragnaros - SellIn: 5, Quality: 80",
 ]
 `;
