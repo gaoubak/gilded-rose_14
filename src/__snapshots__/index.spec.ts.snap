@@ -100,3 +100,72 @@ exports[`GildedRose should not increase quality above 50 for Aged Brie 1`] = `
   "After update:",
 ]
 `;
+
+exports[`should degrade Quality of "normal" item twice as fast after sell by date 1`] = `
+[
+  "Before update:",
+  "Default item before:",
+  "Default item after:",
+  "After update:",
+]
+`;
+
+exports[`should increase Quality for "Aged Brie" as it gets older 1`] = `
+[
+  "Before update:",
+  "Aged Brie before:",
+  "Aged Brie after:",
+  "After update:",
+]
+`;
+
+exports[`should increase Quality for "Backstage passes" according to SellIn value 1`] = `
+[
+  "Before update:",
+  "Backstage Pass before:",
+  "Backstage Pass after:",
+  "After update:",
+  "Before update:",
+  "Backstage Pass before:",
+  "Backstage Pass after:",
+  "After update:",
+  "Before update:",
+  "Backstage Pass before:",
+  "Backstage Pass after:",
+  "After update:",
+]
+`;
+
+exports[`should increase Quality for "Backstage passes" as SellIn value approaches 1`] = `
+[
+  "Before update:",
+  "Backstage Pass before:",
+  "Backstage Pass after:",
+  "After update:",
+]
+`;
+
+exports[`should never allow Quality to be more than 50 1`] = `
+[
+  "Before update:",
+  "Aged Brie before:",
+  "Aged Brie after:",
+  "After update:",
+]
+`;
+
+exports[`should never allow negative Quality 1`] = `
+[
+  "Before update:",
+  "Default item before:",
+  "Default item after:",
+  "After update:",
+]
+`;
+
+exports[`should never change SellIn or Quality for "Sulfuras" 1`] = `
+[
+  "Before update:",
+  "After update:",
+]
+`;
